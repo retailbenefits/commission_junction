@@ -160,7 +160,7 @@ class CommissionJunction
   end
 
   def extract_contents(response, first_level, second_level = nil)
-    cj_api = response['cj_api']
+    cj_api = response['cj_api'] rescue nil
 
     raise ArgumentError, 'cj api missing from response' if cj_api.nil?
 
